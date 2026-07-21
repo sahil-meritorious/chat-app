@@ -7,7 +7,7 @@ name: rag-chat-frontend
 buildCommand: "npm install && npm run build"
 
 # Start command - render serves static files from the build directory
-startCommand: "npx serve -s build"
+startCommand: "serve -s dist -l $PORT"
 
 # Environment variables
 envVars:
@@ -18,7 +18,7 @@ envVars:
 
 # Ports
 ports:
-  - 5000
+  - 10000
 
 # Deploy on push
 deployOnPush: true
