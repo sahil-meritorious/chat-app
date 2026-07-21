@@ -1,0 +1,43 @@
+# Render configuration for frontend chat app
+
+type: web-service
+name: rag-chat-frontend
+
+# Build settings
+buildCommand: "npm install && npm run build"
+
+# Start command - render serves static files from the build directory
+startCommand: "npx serve -s build"
+
+# Environment variables
+envVars:
+  - key: REACT_APP_BACKEND_URL
+    value: "https://basic-rag-backend.onrender.com"
+  - key: NODE_ENV
+    value: "production"
+
+# Ports
+ports:
+  - 5000
+
+# Deploy on push
+deployOnPush: true
+
+# Static file settings
+# Render automatically serves files from the build directory
+# No need to specify static file path as serve handles it
+
+# Health check
+# healthCheckPath: "/"
+
+# Logs
+logs:
+  level: info
+
+# Environment specific settings (if needed)
+# environments:
+#   - name: staging
+#     buildCommand: "npm install && npm run build:staging"
+#     envVars:
+#       - key: REACT_APP_BACKEND_URL
+#         value: "https://basic-rag-backend-staging.onrender.com"
