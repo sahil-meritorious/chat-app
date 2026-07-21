@@ -7,19 +7,19 @@ export default defineConfig({
     port: 5173,
     proxy: {
       "/chat": {
-        target: "http://127.0.0.1:7000",
+        target: "https://rag-application-q614.onrender.com",
         changeOrigin: true,
       },
       "/chats": {
-        target: "http://127.0.0.1:7000",
+        target: "https://rag-application-q614.onrender.com",
         changeOrigin: true,
       },
       "/auth": {
-        target: "http://127.0.0.1:7000",
+        target: "https://rag-application-q614.onrender.com",
         changeOrigin: true,
       },
       "/uploads": {
-        target: "http://127.0.0.1:7000",
+        target: "https://rag-application-q614.onrender.com",
         changeOrigin: true,
       },
     },
